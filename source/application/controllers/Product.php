@@ -5,7 +5,9 @@ class Product extends CI_Controller {
 
     public function index()
     {
-        $this->load->view("product/list");
+        $text = "some text ...";
+        $data = array("message" => $text);
+        $this->load->view("product/list", $data);
     }
 
 }
