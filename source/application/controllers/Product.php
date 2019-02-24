@@ -18,4 +18,12 @@ class Product extends CI_Controller {
         var_dump($result);
     }
 
+    public function list_table()
+    {
+        $this->load->model("ProductModel", "products");
+        $result = $this->products->list_all();
+        $data = array("products" => $result);
+        $this->load->view("product/list_table", $data);
+    }
+
 }
