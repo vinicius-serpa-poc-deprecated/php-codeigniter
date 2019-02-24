@@ -10,7 +10,7 @@ class Product extends CI_Controller {
         $this->load->view("product/list", $data);
     }
 
-    public function list()
+    public function list_dump()
     {
         $this->load->model("ProductModel", "products"); // params: model name, ref name
         $result = $this->products->list_all(); 
